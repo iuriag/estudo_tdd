@@ -2,23 +2,6 @@
 require_once 'class/NumeroRomano.php';
 class NumeroRomanoTest extends PHPUnit_Framework_TestCase {
 
-    /*
-     * - Converter I para 1(ok)
-     * - Convertor II para 2 (ok)
-     * - Converter V para 5(ok)
-     * - Converter IV para 4(ok)
-     * - Converter VI para 6(ok)
-     * - Converter X para 10(ok)
-     * -  Converter XI para 11(ok)
-     * - Converter L para 50(ok)
-     * - Converter C para 100(ok)
-     * - Converter D para 500(ok)
-     * - Converter M para 1000(ok)
-     * - Converter MD para 1500(ok)
-     * - Valor Invalido (ok)
-     */
- 
-    
     public function testConverter_I_para_1() {
         
         $oNumeroRomano = new NumeroRomano('I');
@@ -109,7 +92,7 @@ class NumeroRomanoTest extends PHPUnit_Framework_TestCase {
         $oNumeroRomano = new NumeroRomano('IX');
         self::assertEquals(9, $oNumeroRomano->toInt());
     }
-    public function testConverter_MCMXLIV_para_1994() {
+    public function testConverter_MCMXLIV_para_1944() {
     
         $oNumeroRomano = new NumeroRomano('MCMXLIV');
         self::assertEquals(1944, $oNumeroRomano->toInt());
